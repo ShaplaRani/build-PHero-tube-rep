@@ -35,16 +35,15 @@
 <body class="font-inter w-11/12 m-auto">
     <header>
       <nav class="mt-12">
-        <div class="flex justify-between items-center">
-            <div class="flex gap-3">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-5">
+            <div class="flex flex-1 gap-3 ">
               <i class="fa-solid fa-circle-play text-primaryColor text-3xl"></i>
               <h2 class="font-bold text-3xl text-black"><span class="text-primaryColor">PH</span> Tube</h2>
             </div>
-            <div>
+            <div class=" flex flex-1 justify-between gap-4 ">
              <button class="font-medium text-xl text-black bg-gray-300 py-3 px-5 rounded-md">Sort by view</button>
-            </div>
-            <div>
-               <button class="font-medium text-xl text-white bg-primaryColor py-3 px-5 rounded-md">Blog</button>
+           
+              <button id="btn-blog" class="font-medium text-xl text-white bg-primaryColor py-3 px-5 rounded-md">Blog</button>
             </div>
         </div>
       </nav>
@@ -54,14 +53,17 @@
       <hr>
     </div>
     <main>
-      <div id="button-container" class="flex gap-6 justify-center">
+      <div id="button-container" class="flex gap-2 md:gap-6 justify-center  ">
         <!-- <button class="font-medium text-lg text-gray-600 bg-gray-200 py-3 px-5 rounded-md"> ALL</button>
         <button class="font-medium text-lg text-gray-600 bg-gray-200 py-3 px-5 rounded-md"> ALLff</button>
         <button class="font-medium text-lg text-gray-600 bg-gray-200 py-3 px-5 rounded-md"> ALggnL</button> -->
 
       </div>
-      <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+      <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 relative">
 
+      </div>
+      <div id="empty-card" class="text-center font-bold text-4xl text-black mt-32">
+               <!-- <img src="Icon.png" alt=""> -->
       </div>
     </main>
     <script src="./index.js"></script>
