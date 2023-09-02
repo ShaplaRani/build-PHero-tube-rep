@@ -4,38 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <!-- Inter google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
      <!-- Tailwind and daisy UI  -->
      <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
      <script src="https://cdn.tailwindcss.com"></script>
+     <style>
+      .font-inter{
+      
+        font-family: 'Inter', sans-serif;
+
+      }
+ </style>
 </head>
-<body>
+<body class="font-inter">
     <main>
         <section class="w-8/12 m-auto mt-40">
+            <h2 class="font-semibold text-3xl text-[#FF1F3D] mb-5">Answer to the blog question is given below:</h2>
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" checked="checked" /> 
                 <div class="collapse-title text-xl font-medium">
-                    Discuss the scope of var, let, and const
+                    Discuss the scope of var, let, and const?
                 </div>
-                <div class="collapse-content"> 
-                  <p>hello</p>
+                <div class="collapse-content">
+                  <h2 class="text-xl font-medium">Answer:</h2>
+                   <p class = "text-base font-normal">Scope of variable refers to the accessibility of a 
+                    particular variable within the program.</p> 
+                  <h2 class="text-lg font-medium">The scope of var:</h2>
+                    <ul class="text-base font-normal list-disc ml-4">
+                      <li>The keyword var in javascript is used to declare a variable that is global and function scoped.</li>
+                      <li>Var type variables can be redeclare and reassigned.</li>
+                      <li>Var type variables are initialized with undefined.</li>
+                    </ul>
+                  <h2 class="text-lg font-medium">The scope of let:</h2>
+                    <ul class="text-base font-normal list-disc ml-4">
+                      <li>The keyword let in javascript is used to declare a variable that is  block scoped.</li>
+                      <li>Let type variables can be reassigned but can not be redeclare.</li>
+                     
+                      <li>Let type variables are not initialized. </li>
+                    </ul>
+                  <h2 class="text-lg font-medium">The scope of const:</h2>
+                    <ul class="text-base font-normal list-disc ml-4">
+                      <li>The keyword const in javascript is used to declare a variable that is  block scoped.</li>
+                      <li>Const type variables  can not be reassigned and redeclare.</li>
+                      <li>Const type variables  are not initialized. </li>
+                    </ul>
                 </div>
               </div>
               <div class="collapse collapse-arrow bg-base-200 my-4">
                 <input type="radio" name="my-accordion-2" /> 
-                <div class="collapse-title text-xl font-medium">
-                    Tell us the use cases of null and undefined
+                <div class="collapse-title text-2xl font-medium">
+                    Tell us the use cases of null and undefined?
                 </div>
                 <div class="collapse-content"> 
-                  <p>hello</p>
+                   <h2 class="text-xl font-medium">Answer:</h2>
+                    <h2 class="text-lg font-medium">The use cases of undefined:</h2>
+                    <ul class="text-base font-normal list-disc ml-4">
+                      <li> A variable har been declared but has not been assigned
+                         a value will give undefined.
+                      </li>
+                      <li>A function  returns undefined if a value was not returned.</li>
+                      <li>The set a value directly to undefined.</li>
+                      <li>It is the default value  of function parameters that have not been provided.</li>
+                      <li>When you access an object property that doesn't exist,it return undefined. </li>
+                      
+                    </ul>
+                    <h2 class="text-lg font-medium">The use cases of null:</h2>
+                     <p class = "text-base font-normal">In javascript ,null is a special value that represents an
+                      empty or unknown value.   It is an object in javaScript and represents primitive data  types.
+                      A null value javascript is used for referring absence of any object value and if any function
+                       or variable returns null,then we can infer  that the object could not be created.
+                    </p>
+                  </div>
                 </div>
-              </div>
               <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" /> 
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-2xl font-medium">
                     What do you mean by REST API?
                 </div>
                 <div class="collapse-content"> 
-                  <p>hello</p>
+                  <h2 class="text-xl font-medium">Answer:</h2>
+                   <P class = "text-base font-normal">A REST API is an application programming interface that adheres to the constraints of REST
+                    architectural style and enables  interaction with RESTful web services.It is a way to
+                    communicate between client and server.Interconnected networks
+                     make up the web. A web service is a set of open protocols and standards used for exchanging
+                     data between client-server applications. 
+                    </P>
+
+
                 </div>
             </div>
         </section>
