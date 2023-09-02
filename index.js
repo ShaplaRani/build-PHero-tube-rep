@@ -109,7 +109,7 @@ handleCategory();
     div.innerHTML = `
       <div class="card bg-white ">
        <figure><img class ="h-56 w-full" src="${video.thumbnail}" alt="" /></figure>
-       <div class = "absolute top-48 left-64 font-normal bg-black rounded-md text-xs w-36 text-white text-center">
+       <div class = "absolute top-48 left-56 md:left-48 lg:left-64 font-normal bg-black rounded-md text-xs w-36 text-white text-center">
         <p>${video.others?.posted_date?timeConvert(video.others?.posted_date):''}</p>
        </div>
        
