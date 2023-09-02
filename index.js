@@ -29,7 +29,7 @@ const handleLoadVideos = async (category_id) =>{
        <div class="card bg-white ">
         <h2 class = "hidden"> ${category_id} </h2>
         <figure><img class ="h-56 w-full" src="${video.thumbnail}" alt="" /></figure>
-        <div class = "absolute top-48 left-60 font-normal bg-black text-xs w-36 text-white text-center">
+        <div class = "absolute top-48 left-56 md:left-48 lg:left-64 font-normal bg-black rounded-md text-xs w-36 text-white text-center">
          <p>${video.others?.posted_date?timeConvert(video.others?.posted_date):''}</p>
         </div>
         
@@ -109,7 +109,7 @@ handleCategory();
     div.innerHTML = `
       <div class="card bg-white ">
        <figure><img class ="h-56 w-full" src="${video.thumbnail}" alt="" /></figure>
-       <div class = "absolute top-48 left-60 font-normal bg-black text-xs w-36 text-white text-center">
+       <div class = "absolute top-48 left-64 font-normal bg-black rounded-md text-xs w-36 text-white text-center">
         <p>${video.others?.posted_date?timeConvert(video.others?.posted_date):''}</p>
        </div>
        
