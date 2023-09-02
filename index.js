@@ -29,9 +29,9 @@ const handleLoadVideos = async (category_id) =>{
        <div class="card bg-white ">
         <h2 class = "hidden"> ${category_id} </h2>
         <figure><img class ="h-56 w-full" src="${video.thumbnail}" alt="" /></figure>
-        <div class = "absolute top-48 left-56 md:left-48 lg:left-64 font-normal bg-black rounded-md text-xs w-36 text-white text-center">
-         <p>${video.others?.posted_date?timeConvert(video.others?.posted_date):''}</p>
-        </div>
+        <div  class = "flex justify-end font-normal  rounded-md text-xs -mt-7 text-white ">
+         <p class ="bg-black rounded w-36 text-center mr-3 ">${video.others?.posted_date?timeConvert(video.others?.posted_date):''}</p>
+         </div>
         
         <div class="card-body">
          <div class = "flex gap-4 "> 
@@ -51,12 +51,10 @@ const handleLoadVideos = async (category_id) =>{
     cardContainer.appendChild(div);   
         
     }):emptyArray();
-  
-   
-    
 };
 //time convert
  const timeConvert = (num) =>{
+   num = parseInt(num);
    const hours = (num / 60);
    const hour = Math.floor(hours);
    const minutes = (hours - hour) * 60;
@@ -70,8 +68,8 @@ const emptyArray =() =>{
    const div = document.createElement('div');
    div.innerHTML = `
     <div class = "flex justify-center mb-5">  <img class = "text-center" src="Icon.png" alt=""> </div>
-   Oops!! Sorry, There is <br>
-   no content here
+    <p> Oops!! Sorry, There is <br> no content here</p>
+  
    `;
    emptyContainer.appendChild(div);
 
@@ -86,6 +84,7 @@ document.getElementById('btn-blog').addEventListener('click',function(){
 handleLoadVideos('1000');
 handleCategory();
 
+
 //sorting
  const sortView =  ()=>{
    sorting(value);
@@ -98,7 +97,7 @@ handleCategory();
    (parseFloat(s1.others?.views.split('K')[0])*1000));
 
    handleLoadVideosSort(view);
-}
+};
   const handleLoadVideosSort =(view) =>{
    const cardContainer = document.getElementById('card-container');
    cardContainer.innerHTML = "";
@@ -109,9 +108,9 @@ handleCategory();
     div.innerHTML = `
       <div class="card bg-white ">
        <figure><img class ="h-56 w-full" src="${video.thumbnail}" alt="" /></figure>
-       <div class = "absolute top-48 left-56 md:left-48 lg:left-64 font-normal bg-black rounded-md text-xs w-36 text-white text-center">
-        <p>${video.others?.posted_date?timeConvert(video.others?.posted_date):''}</p>
-       </div>
+       <div  class = "flex justify-end font-normal  rounded-md text-xs -mt-7 text-white ">
+         <p class ="bg-black rounded w-36 text-center mr-3 ">${video.others?.posted_date?timeConvert(video.others?.posted_date):''}</p>
+         </div>
        
        <div class="card-body">
         <div class = "flex gap-4"> 
@@ -131,5 +130,6 @@ handleCategory();
    cardContainer.appendChild(div);   
        
    }):emptyArray();
+
 };
 
