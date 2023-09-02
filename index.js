@@ -7,7 +7,7 @@ const handleCategory = async () => {
    data.data?.forEach((category) =>{
       const div = document.createElement('div');
       div.innerHTML = `
-      <button onclick = "handleLoadVideos('${category?.category_id}')" class="button-colors font-medium text-lg
+      <button onclick = "handleLoadVideos('${category?.category_id}')" class="btn-red font-medium text-lg
        text-gray-600 bg-gray-200 py-2 md:py-3 px-4 md:px-5 rounded-md">${category.category}</button>
       `;
       buttonContainer.appendChild(div);
@@ -22,7 +22,7 @@ const handleLoadVideos = async (category_id) =>{
     cardContainer.innerHTML = "";
     const emptyContainer = document.getElementById('empty-card');
     emptyContainer.innerHTML = "";
-  
+    
     data.data.length !== 0?data.data.forEach(video => {
      const div = document.createElement('div');
      div.innerHTML = `
@@ -51,6 +51,8 @@ const handleLoadVideos = async (category_id) =>{
     cardContainer.appendChild(div);   
         
     }):emptyArray();
+   
+    
 };
 //time convert
  const timeConvert = (num) =>{
